@@ -1,0 +1,43 @@
+# CSC505 Module 1 Random Program for Critical Thinking Assignment
+import random
+
+"""
+We are going to make a very basic 8 Ball program, which uses a random number compared to a library to provide
+a random answer to whomever is asking.
+"""
+
+line = "########################################"
+print()
+print("Welcome to your Crystal Ball. Please tell me your name...")
+name = input("What is your name? ")
+print()
+print(f'Very pleased to meet you, {name}. Please let me know how I can help you?')
+request = input()
+print()
+print(f"Okay, sounds good.")
+print(f"You asked: {request}")
+print("And I have determined:")
+
+# Outcome will be based on a random number between 1 and 8
+outcome = random.randint(1,8)
+
+# Here we create a library, which will correspond to the INT from above
+library = {
+    #  "######################################## line reference for ASCII art"
+    1: "############ Very Doubtful #############",
+    2: "############# Not so Good ##############",
+    3: "########## Do not count on it ##########",
+    4: "##### I'll keep that one to myself #####",
+    5: "########## Sings point to yes ##########",
+    6: "############# Most Likely ##############",
+    7: "############ Yes, for sure #############",
+    8: "############ It is certain #############"
+}
+print()
+print(line)
+# Here is the actual pairing between the number and the outcome
+print(f'{library[outcome]}')
+print(line)
+print()
+print("I hope you found what you were looking for\n")
+print(input("Press anything to acknowledge and seal your fate..."))
