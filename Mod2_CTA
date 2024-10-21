@@ -1,0 +1,76 @@
+# Nicholas R Crissie, CSC505, Module 2 Critical Thinking Assignment
+
+
+class CrissieModel:
+    def __init__(self):
+        self.initiation = {}
+        self.planning = {}
+        self.design = {}
+        self.development = {}
+        self.testing = {}
+        self.deployment = {}
+        self.closure = {}
+        self.sustainability = {}
+
+    def get_initiation(self):
+        self.initiation['Define Objectives'] = input("Enter objectives for Initiation: ")
+        self.initiation['Stakeholder Analysis'] = input("Enter Stakeholder Analysis: ")
+        self.initiation['Approval of Charter'] = input("Has charter been approved? (y/n): ")
+
+    def get_planning(self):
+        self.planning['Requirements Gathering'] = input("What requirements need to be laid out: ")
+        self.planning['Project Plan'] = input("Do we have an overall project plan? (y/n): ")
+        self.planning['Risk Management Plan'] = input("Do we have a Risk Management Plan? (y/n): ")
+
+    def get_design(self):
+        self.design['System Architecture'] = input("Enter System Architecture details: ")
+        self.design['API Planning'] = input("Enter API Planning details: ")
+        self.design['Database Design'] = input("Enter Database Design details: ")
+
+    def get_development(self):
+        self.development['Environment Setup'] = input("Enter Environment Setup details: ")
+        self.development['Code Endpoints'] = input("Have we implement coding endpoints? (y/n): ")
+        self.development['Implement Blockchain'] = input("Do we require blockchain implementation? (y/n): ")
+
+    def get_testing(self):
+        self.testing['Unit Testing'] = input("Enter Unit Testing details: ")
+        self.testing['Integration Testing'] = input("Have we completed Integration Testing? (y/n): ")
+        self.testing['User Acceptance'] = input("Has the customer accepted the application? (y/n): ")
+
+    def get_deployment(self):
+        self.deployment['Deploy API to Production'] = input("Has API been deployed? (y/n): ")
+        self.deployment['Gather User Feedback'] = input("Enter User Feedback details: ")
+
+    def get_closure(self):
+        self.deployment['Project Review'] = input("Enter Project Review details: ")
+        self.deployment['Documentation Handover'] = input("Has documentation been handed over? (y/n): ")
+        self.deployment['Data Collection'] = input("Is Data Collection completed? (y/n): ")
+
+    def get_sustainability(self):
+        self.sustainability['Customer Sustainability'] = input("Enter Customer Sustainability details: ")
+        self.sustainability['Constant Improvement'] = input("Enter Constant Improvement details: ")
+
+    def display_model(self):
+        print("\nCrissie Model - Project Phases\n")
+        print("Initiation Phase:", self.initiation)
+        print("Planning Phase:", self.planning)
+        print("Design Phase:", self.design)
+        print("Development Phase:", self.development)
+        print("Testing Phase:", self.testing)
+        print("Deployment Phase:", self.deployment)
+        print("Closure Phase:", self.closure)
+        print("Sustainability Phase:", self.sustainability)
+
+
+model = CrissieModel()
+
+model.get_initiation()
+model.get_planning()
+model.get_design()
+model.get_development()
+model.get_testing()
+model.get_deployment()
+model.get_closure()
+model.get_sustainability()
+
+model.display_model()
