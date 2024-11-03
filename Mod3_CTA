@@ -1,0 +1,40 @@
+# Initial class for the pages
+class PrototypePages:
+    def __init__(self, name, number):
+        self.name = name
+        self.number = number
+
+# Actual pages, also including a settings screen for future development / user needs
+pages = [
+    PrototypePages("Introduction Screen", 1),
+    PrototypePages("Overview Screen", 2),
+    PrototypePages("Item Manipulation Screen", 3),
+    PrototypePages("Sharing Screen", 4),
+    PrototypePages("Settings Screen", 5)
+]
+
+# General banner for application introduction
+print("Initial Prototype v0.0.1 - Shopping Application")
+print("Initial development by: Nicholas Crissie")
+print("Total pages:", len(pages))
+
+# Overview of state of application and present features
+print("\nApplication Pages:")
+for page in pages:
+    print(f'Page {page.number}: {page.name}')
+
+# Here we show general / expected sequences for the user / customer
+arrow = " -> "
+boot = "Introduction Screen -> Overview Screen -> Item Manipulation Screen"
+item_change = "Overview Screen -> Item Manipulation Screen"
+sharing = "Item Manipulation Screen -> Overview Screen -> Sharing Screen"
+sequence = boot + arrow + item_change + arrow + sharing
+
+print("\nUpon Initial Boot / Loading:")
+print(boot)
+print("\nManipulating Items (adding / removing):")
+print(item_change)
+print("\nShare Cart with Someone:")
+print(sharing)
+print("\nGeneral Application Sequence Flow:")
+print(sequence)
