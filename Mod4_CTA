@@ -13,16 +13,25 @@ def list_traits() -> List[str]:
     ]
     return traits
 
-def print_traits(traits: List[str]):
-    print("\nThe following traits were exhibited by Michael, and are incredibly important to posess as someone working with software:")
-    for i, traits in enumerate(traits, start=1):
-        print(f"Trait {i}: {traits}")
+def explain_traits() -> List[str]:
+    explanations = [
+    "   * Enables software engineers to systematically break down and solve complex problems.",
+    "   * Ensures engineers build software that meets user needs and aligns with project goals.",
+    "   * Allows engineers to design innovative solutions and improve user experience."
+    ]
+    return explanations
+
+def show_all(traits: List[str], explanations: List[str]):
+    print("\nThe following traits were exhibited by Michael, and are incredibly important to possess as someone working with software:")
+    for i, (trait, explanation) in enumerate(zip(traits, explanations), start=1):
+        print(f"Trait {i}: {trait}")
+        print(explanation)
 
 def main():
     program_assignment()
-    list_traits()
     traits = list_traits()
-    print_traits(traits)
+    explanations = explain_traits()
+    show_all(traits, explanations)
 
 if __name__ == "__main__":
     main()
