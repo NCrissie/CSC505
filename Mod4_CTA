@@ -1,0 +1,28 @@
+from typing import List
+
+def program_assignment():
+    print("Created by Nicholas Crissie, as required from CSU Global CSC505 - Module 4")
+    print("\nThis Python script will explain the three most admirable personality attributes of a mentor within the field of software engineering.")
+    print("For this module, I selected my former mentor - Michael Graham - whom I worked with in San Antonio, TX for The Boeing Company")
+
+def list_traits() -> List[str]:
+    traits = [
+    "Analytical Thinking",
+    "Understanding",
+    "Creativity"
+    ]
+    return traits
+
+def print_traits(traits: List[str]):
+    print("\nThe following traits were exhibited by Michael, and are incredibly important to posess as someone working with software:")
+    for i, traits in enumerate(traits, start=1):
+        print(f"Trait {i}: {traits}")
+
+def main():
+    program_assignment()
+    list_traits()
+    traits = list_traits()
+    print_traits(traits)
+
+if __name__ == "__main__":
+    main()
