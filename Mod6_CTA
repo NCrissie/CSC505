@@ -1,0 +1,82 @@
+print("Created by Nicholas Crissie for CSC505 - Module 6")
+print("##################################################\n")
+
+# Level 1: Top-Level Abstract
+def step1():
+    """
+    Step 1: This will be the step where we consider the overall Top-Down view of the program which lays out a check into text
+    """
+    print("1. Input dollar amount (to include cents)")
+    print("2. Convert dollar amount to words")
+    print("3. Format this output for a check")
+    print("4. Print the final check text")
+    print("Please note: this is the MOST abstract level, focusing on the major tasks to be completed")
+
+
+# Level 2: Intermediate Procedure Abstract
+def step2():
+    """
+    Step 2: This will include additional details not considered previously. But it's important to note we are not at the deepest level yet
+    """
+    print("1. Input dollar amount (again, including cents)")
+    print("   - Validate the given input to ensure it is a valid value. This would include ensuring it's numeric")
+    print("2. Convert dollar amount to words")
+    print("   - Split the amount into dollars and cents")
+    print("   - Convert the dollar part into words")
+    print("   - Convert the cents part into words")
+    print("3. Format this output for a check")
+    print("   - Combine dollar and cent words into a readable check format as a stored string")
+    print("4. Print the final check text")
+    print("   - Output the formatted check string")
+    print("Please note: this level takes those larger tasks from Step 1, and breaks them down to even smaller tasks")
+
+
+# Level 3: Lowest-Level Procedure Abstract
+def step3():
+    """
+    Step 3: This is the final level, and is considered the lowest and most broken down tasking of the entire program / process.
+    """
+    print("1. Input dollar amount")
+    print("   - Validate the given input to ensure it is a valid value. This would include ensuring it's numeric")
+    print("   - Use input() to accept the dollar value from the user")
+    print("   - We should also utilize a loop to ensure that the program doesn't quit if the value provided isn't acceptable")
+    print("2. Convert dollar amount to words")
+    print("   - Split the amount into dollars and cents")
+    print("   - Use helper functions / arrays to:")
+    print("      - Convert the dollar part to words")
+    print("      - Convert the cent part to words")
+    print("3. Format this output for a check")
+    print("   - Combine the words into required format")
+    print("   - Handle special cases:")
+    print("      - Singular / plural cases: 'dollar' vs 'dollars'")
+    print("                                 'cent' vs 'cents'")
+    print("      - Error handling if no dollar value is provided")
+    print("4. Print the final check text")
+    print("   - Call upon stored string / text from Step 3")
+    print("   - Use print() to display the final formatted check text")
+    print("Please note: this level is the lowest level, and provides detailed steps to implement each task and sub-task")
+
+
+# Main function to represent the stepwise refinement process
+def main():
+    print()
+    print("Stepwise Refinement Approach for a writing a check from user input to written text\n")
+
+    print("#### == Level 1: High-Level Abstract == ####\n")
+    step1()
+    print("\n")
+
+    print("#### == Level 2: Intermediate Abstract == ####\n")
+    step2()
+    print("\n")
+
+    print("#### == Level 3: Low-Level Abstract == ####\n")
+    step3()
+    print("\n")
+
+    print("##############  Thank you!  ##############")
+
+
+# Run the program
+if __name__ == "__main__":
+    main()
